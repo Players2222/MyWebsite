@@ -12,79 +12,126 @@
 <body>
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">DongYu Weng</a>
+            <a href="#" class="logo" onclick="openTab(event, 'about')">DongYu Weng</a>
             <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="mailto:your-email@carleton.edu" class="btn-contact">Contact</a></li>
+                <ul class="tab-menu">
+                    <li><button class="tab-link active" onclick="openTab(event, 'about')">About</button></li>
+                    <li><button class="tab-link" onclick="openTab(event, 'research')">Research</button></li>
+                    <li><button class="tab-link" onclick="openTab(event, 'projects')">Projects</button></li>
+                    <li><a href="mailto:wengd@carleton.edu" class="btn-contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section id="hero" class="container">
-            <div class="hero-content">
-                <h1>Exploring the intersection of <span class="highlight">Physics</span> and <span class="highlight">Code</span>.</h1>
-                <p class="subtitle">Sophomore at Carleton College • Physics & Computer Science Double Major</p>
+    <main class="container">
+        <div id="about" class="tab-content active">
+            <section id="hero">
+                <h1>Exploring the intersection of <span class="highlight">Physics</span> and <span class="highlight">CS</span>.</h1>
+                <p class="subtitle">Sophomore at Carleton College • Prospective Physics & Computer Science Double Major</p>
                 <div class="hero-tags">
                     <span class="tag">Computational Physics</span>
                     <span class="tag">Systems Programming</span>
                     <span class="tag">Non-linear Dynamics</span>
                 </div>
-            </div>
-        </section>
+            </section>
+            
+            <section class="bio-section">
+                <h2>About Me</h2>
+                <p>I am a student-researcher focused on the analytical and computational modeling of physical 
+                    systems. Whether I'm implementing a Scheme interpreter in C or analyzing chaotic oscillators,
+                     I enjoy building tools that bridge the gap between theoretical physics and robust software.</p>
+            </section>
+        </div>
 
-        <section id="about" class="container">
-            <h2>About Me</h2>
-            <p>I am a student-researcher focused on the analytical and computational modeling of physical systems. Whether I'm implementing a Scheme interpreter in C or analyzing chaotic oscillators, I enjoy building tools that bridge the gap between theoretical physics and robust software.</p>
-        </section>
+        <div id="research" class="tab-content">
+            <section>
+                <h2>Research Experience</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Optics Education Research</h3>
+                        <span class="date">Present</span>
+                    </div>
+                    <p class="role">Research Assistant | Carleton College</p>
+                    <p>Contributing to outreach and research in optical sciences, focusing on educational tools and experimental physics methodologies.</p>
+                </div>
+            </section>
+        </div>
 
-        <section id="research" class="container">
-            <h2>Research</h2>
-            <div class="card">
-                <h3>Optics Education Lab</h3>
-                <p class="role">Research Assistant | Carleton College</p>
-                <p>Contributing to outreach and research in optical sciences, focusing on educational tools and experimental physics methodologies.</p>
-            </div>
-        </section>
-
-        <section id="projects" class="container">
-            <h2>Selected Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Scheme Interpreter</h3>
-                    <p>A custom Lisp-family interpreter built in C. Features include tokenization, recursive descent parsing, and a custom memory allocator.</p>
-                    <div class="tech-stack">
-                        <span class="tag-tech">C</span>
-                        <span class="tag-tech">Memory Mgmt</span>
+        <div id="projects" class="tab-content">
+            <section>
+                <h2>Selected Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Scheme Interpreter</h3>
+                        <p>A custom Scheme interpreter built in C. Features include tokenization, recursive bottom-up parsing, and a custom memory allocator.</p>
+                        <div class="tech-stack">
+                            <span class="tag-tech">C</span>
+                            <span class="tag-tech">Systems</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Chaotic Oscillator Analysis</h3>
+                        <p>Simulating the Asymmetric Coupled Duffing Oscillator. Calculated Lyapunov exponents and generated Poincaré maps to visualize chaos.</p>
+                        <div class="tech-stack">
+                            <span class="tag-tech">Python</span>
+                            <span class="tag-tech">NumPy</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Three-Body Simulation</h3>
+                        <p>Numerical integration of the gravitational three-body problem using Python, exploring stable and unstable orbital configurations.</p>
+                        <div class="tech-stack">
+                            <span class="tag-tech">SciPy</span>
+                            <span class="tag-tech">Physics</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3>Chaotic Oscillator Analysis</h3>
-                    <p>Simulating the Asymmetric Duffing Oscillator. Calculated Lyapunov exponents and generated Poincaré maps to visualize phase space chaos.</p>
-                    <div class="tech-stack">
-                        <span class="tag-tech">Python</span>
-                        <span class="tag-tech">NumPy</span>
-                        <span class="tag-tech">Matplotlib</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Three-Body Simulation</h3>
-                    <p>Numerical integration of the gravitational three-body problem using Python, exploring stable and unstable orbital configurations.</p>
-                    <div class="tech-stack">
-                        <span class="tag-tech">SciPy</span>
-                        <span class="tag-tech">Numerical Methods</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer class="container">
-        <p>&copy; 2026 DongYu Weng • Built with GitHub Pages</p>
+        <p>&copy; 2026 DongYu Weng • Physics & Computer Science @ Carleton College</p>
     </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Prevent link behavior for the logo
+            if (evt.type === 'click' && evt.target.classList.contains('logo')) {
+                evt.preventDefault();
+            }
+
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Deactivate all tab buttons
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show current tab and activate button
+            var activeTab = document.getElementById(tabName);
+            activeTab.style.display = "block";
+            setTimeout(() => activeTab.classList.add("active"), 10);
+            
+            // If the logo was clicked, manually set the first tab button to active
+            if (evt.target.classList.contains('logo')) {
+                document.querySelector('.tab-link').classList.add('active');
+            } else {
+                evt.currentTarget.classList.add("active");
+            }
+
+            // Scroll to top on tab change
+            window.scrollTo(0, 0);
+        }
+    </script>
 </body>
 </html>
