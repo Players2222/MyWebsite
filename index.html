@@ -4,48 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DongYu Weng | Physics & CS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">DW</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="mailto:your-email@carleton.edu">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">D.WENG</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="mailto:your-email@carleton.edu" class="btn-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="hero">
-            <h1>DongYu Weng</h1>
-            <p>Sophomore at Carleton College | Physics & Computer Science</p>
+        <section id="hero" class="container">
+            <div class="hero-content">
+                <h1>Exploring the intersection of <span class="highlight">Physics</span> and <span class="highlight">Code</span>.</h1>
+                <p class="subtitle">Sophomore at Carleton College • Physics & Computer Science Double Major</p>
+                <div class="hero-tags">
+                    <span class="tag">Computational Physics</span>
+                    <span class="tag">Systems Programming</span>
+                    <span class="tag">Non-linear Dynamics</span>
+                </div>
+            </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="container">
             <h2>About Me</h2>
-            <p>I am interested in computational physics, non-linear dynamics, and building programming language interpreters.</p>
+            <p>I am a student-researcher focused on the analytical and computational modeling of physical systems. Whether I'm implementing a Scheme interpreter in C or analyzing chaotic oscillators, I enjoy building tools that bridge the gap between theoretical physics and robust software.</p>
         </section>
 
-        <section id="projects">
+        <section id="research" class="container">
+            <h2>Research</h2>
+            <div class="card">
+                <h3>Optics Education Lab</h3>
+                <p class="role">Research Assistant | Carleton College</p>
+                <p>Contributing to outreach and research in optical sciences, focusing on educational tools and experimental physics methodologies.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
             <h2>Selected Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
                     <h3>Scheme Interpreter</h3>
-                    <p>A custom Lisp/Scheme interpreter written in C with manual memory management.</p>
+                    <p>A custom Lisp-family interpreter built in C. Features include tokenization, recursive descent parsing, and a custom memory allocator.</p>
+                    <div class="tech-stack">
+                        <span class="tag-tech">C</span>
+                        <span class="tag-tech">Memory Mgmt</span>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Chaos Theory Simulations</h3>
-                    <p>Numerical analysis of the Asymmetric Duffing Oscillator using Python and Matplotlib.</p>
+                    <h3>Chaotic Oscillator Analysis</h3>
+                    <p>Simulating the Asymmetric Duffing Oscillator. Calculated Lyapunov exponents and generated Poincaré maps to visualize phase space chaos.</p>
+                    <div class="tech-stack">
+                        <span class="tag-tech">Python</span>
+                        <span class="tag-tech">NumPy</span>
+                        <span class="tag-tech">Matplotlib</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Three-Body Simulation</h3>
+                    <p>Numerical integration of the gravitational three-body problem using Python, exploring stable and unstable orbital configurations.</p>
+                    <div class="tech-stack">
+                        <span class="tag-tech">SciPy</span>
+                        <span class="tag-tech">Numerical Methods</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 DongYu Weng</p>
+    <footer class="container">
+        <p>&copy; 2026 DongYu Weng • Built with GitHub Pages</p>
     </footer>
 </body>
 </html>
