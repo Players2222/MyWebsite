@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo" onclick="openTab(event, 'about')">DongYu Weng</a>
+            <a href="#" class="logo" onclick="openTab(event, 'about')">DONGYU WENG</a>
             <nav>
                 <ul class="tab-menu">
                     <li><button class="tab-link active" onclick="openTab(event, 'about')">About</button></li>
@@ -28,72 +28,58 @@
     <main class="container">
         <div id="about" class="tab-content active">
             <section id="hero">
-                <h1>Building systems from <span class="highlight">code to CAD</span>.</h1>
-                <p class="subtitle">Sophomore at Carleton College • Physics & Computer Science</p>
-                
-                <p>I design and fabricate tools that make physics tangible. My work ranges from low-level systems programming in C to precision CNC manufacturing for lab-ready hardware.</p>
-            
-                <div class="hero-tags">
-                    <span class="tag">Optics Outreach</span>
-                    <span class="tag">Systems Programming</span>
-                    <span class="tag">Digital Fabrication</span>
-                    <span class="tag">Education Tech</span>
+                <div class="hero-layout">
+                    <div class="hero-image-wrapper">
+                        <img src="headshot.jpg" alt="DongYu Weng" class="hero-pfp">
+                    </div>
+                    <div class="hero-content">
+                        <h1>DongYu Weng</h1>
+                        <p class="subtitle">Sophomore at Carleton College • Physics & Computer Science</p>
+                        <p class="hero-description">
+                            I build at the intersection of low-level systems and physical hardware. 
+                            As a manager at the Carleton Makerspace, I focus on making complex 
+                            physical phenomena tangible through digital fabrication and 
+                            custom-built software tools.
+                        </p>
+                        <div class="hero-tags">
+                            <span class="tag">Optics Outreach</span>
+                            <span class="tag">Systems Programming</span>
+                            <span class="tag">Digital Fabrication</span>
+                        </div>
+                    </div>
                 </div>
             </section>
             
             <section class="bio-section">
-                <h2>About Me</h2>
-                <div class="bio-layout">
-                    <div class="headshot-wrapper">
-                        <img src="headshot.jpg" alt="DongYu Weng Headshot" class="headshot">
-                    </div>
-                    <div class="bio-text">
-                        <p>My work is driven by a "build-it-yourself" philosophy. As a researcher in the Optics Education Lab and a manager at the Carleton Makerspace, I prototype the tools used to visualize and teach complex physical phenomena.</p>
-                        
-                        <p>I focus on creating robust, accessible systems that bridge the gap between theoretical physics and the lab bench. By building my own tools from scratch, I ensure they meet the specific technical and educational needs of the project.</p>
-                    </div>
+                <h2>My Working Style</h2>
+                <div class="bio-text">
+                    <p>My work is driven by the belief that truly understanding a system requires building it from the ground up. Whether it's a Scheme interpreter in C or a high-torque granulator for PLA reclamation, I design tools that are robust, transparent, and educational.</p>
+                    <p>Currently, I am a researcher in the Optics Education Lab where I prototype hardware to help visualize optical principles for outreach and classroom settings.</p>
                 </div>
             </section>
         </div>
+
         <div id="research" class="tab-content">
             <section>
                 <h2>Research Experience</h2>
                 <div class="card">
                     <div class="card-header">
                         <h3>Optics Education Research</h3>
-                        <span class="date">Present</span>
+                        <span class="date">Jan 2026 – Present</span>
                     </div>
                     <p class="role">Research Assistant | Carleton College</p>
-                    <p>Contributing to outreach and research in optical sciences, focusing on educational tools and experimental physics methodologies.</p>
+                    <p>Collaborating with Martha-Elizabeth Baylor to develop foundational optics outreach materials. Focusing on hands-on hardware to bridge the gap between abstract physics and early childhood education.</p>
                 </div>
             </section>
         </div>
-        <div id="resume" class="tab-content">
-            <section>
-                <h2>Resume</h2>
-                <div class="resume-controls">
-                    <p>Download or view my full resume.</p>
-                    <a href="DongYu_Resume.pdf" target="_blank" class="btn-resume">
-                        Download PDF
-                    </a>
-                </div>
-                
-                <div class="resume-viewer">
-                    <object data="DongYu_Resume.pdf" type="application/pdf" width="100%" height="800px">
-                        <p>It appears your browser doesn't support embedded PDFs. 
-                        <a href="DongYu_Resume.pdf">Click here to download the PDF file.</a>
-                        </p>
-                    </object>
-                </div>
-            </section>
-        </div>
+
         <div id="projects" class="tab-content">
             <section>
                 <h2>Selected Projects</h2>
                 <div class="project-grid">
                     <div class="project-card">
                         <h3>Scheme Interpreter</h3>
-                        <p>A custom Scheme interpreter built in C. Features include tokenization, recursive bottom-up parsing, and a custom memory allocator.</p>
+                        <p>A recursive bottom-up parser and environment-model evaluator built in C. Built from scratch to understand the fundamentals of language implementation.</p>
                         <div class="tech-stack">
                             <span class="tag-tech">C</span>
                             <span class="tag-tech">Systems</span>
@@ -101,25 +87,15 @@
                     </div>
                     <div class="project-card">
                         <h3>Chaotic Oscillator Analysis</h3>
-                        <p>Simulating the Asymmetric Coupled Duffing Oscillator. Calculated Lyapunov exponents and generated Poincaré maps to visualize chaos.</p>
+                        <p>Simulating Asymmetric Coupled Duffing Oscillators. Used NumPy for high-speed vectorization to generate Poincaré sections and analyze Permutation Entropy.</p>
                         <div class="tech-stack">
                             <span class="tag-tech">Python</span>
                             <span class="tag-tech">NumPy</span>
-                            <span class="tag-tech">Physics</span>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <h3>Three-Body Simulation</h3>
-                        <p>Numerical integration of the gravitational three-body problem using Python, exploring stable and unstable orbital configurations.</p>
-                        <div class="tech-stack">
-                            <span class="tag-tech">SciPy</span>
-                            <span class="tag-tech">Matplotlib</span>
-                            <span class="tag-tech">Physics</span>
                         </div>
                     </div>
                     <div class="project-card">
                         <h3>Plastic Recycler</h3>
-                        <p>Designed and fabricated a high-torque granulator for PLA reclamation. Engineered precision steel cutting blades in Fusion 360 for CNC manufacturing and implemented Arduino-based motor control for stall detection.</p>
+                        <p>Designed precision steel cutting blades in Fusion 360 and implemented Arduino-based stall detection for a custom PLA granulator.</p>
                         <div class="tech-stack">
                             <span class="tag-tech">Fusion360</span>
                             <span class="tag-tech">Arduino</span>
@@ -128,47 +104,50 @@
                 </div>
             </section>
         </div>
+
+        <div id="resume" class="tab-content">
+            <section>
+                <h2>Resume</h2>
+                <div class="resume-controls">
+                    <p>Download or view my full resume (Expected Graduation: June 2028).</p>
+                    <a href="DongYu_Resume.pdf" target="_blank" class="btn-resume">Download PDF</a>
+                </div>
+                <div class="resume-viewer">
+                    <object data="DongYu_Resume.pdf" type="application/pdf" width="100%" height="800px">
+                        <p>Your browser doesn't support embedded PDFs. <a href="DongYu_Resume.pdf">Click here to download.</a></p>
+                    </object>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="container">
-        <p>&copy; 2026 DongYu Weng • Physics & Computer Science @ Carleton College</p>
+        <p>&copy; 2026 DongYu Weng • Physics & CS @ Carleton College</p>
     </footer>
 
     <script>
         function openTab(evt, tabName) {
-            // Prevent link behavior for the logo
             if (evt.type === 'click' && evt.target.classList.contains('logo')) {
                 evt.preventDefault();
             }
-
             var i, tabcontent, tablinks;
-            
-            // Hide all tab content
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
                 tabcontent[i].classList.remove("active");
             }
-
-            // Deactivate all tab buttons
             tablinks = document.getElementsByClassName("tab-link");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
-
-            // Show current tab and activate button
             var activeTab = document.getElementById(tabName);
             activeTab.style.display = "block";
             setTimeout(() => activeTab.classList.add("active"), 10);
-            
-            // If the logo was clicked, manually set the first tab button to active
             if (evt.target.classList.contains('logo')) {
                 document.querySelector('.tab-link').classList.add('active');
             } else {
                 evt.currentTarget.classList.add("active");
             }
-
-            // Scroll to top on tab change
             window.scrollTo(0, 0);
         }
     </script>
