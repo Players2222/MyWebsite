@@ -100,7 +100,16 @@ h2 { font-size: 0.9rem; margin-bottom: 2rem; text-transform: uppercase; letter-s
     padding: 2rem; border-radius: 8px; transition: 0.3s;
 }
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-.project-card:hover { border-color: var(--accent-color); transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.05); }
+.project-card:hover { border-color: var(--accent-color); transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.05); cursor: default;}
+
+/* Apply the pop-out effect to Research cards */
+.card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    cursor: default; /* Keeps the pointer standard since the card itself isn't a link */
+}
+
 
 
 .resume-controls { display: flex; justify-content: space-between; align-items: center; background: #fff; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
