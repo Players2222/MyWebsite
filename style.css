@@ -112,6 +112,14 @@ h2 { font-size: 0.9rem; margin-bottom: 2rem; text-transform: uppercase; letter-s
 
 
 
+/* Research card details */
+.card { margin-bottom: 1.5rem; }
+.card-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
+.card .date { font-family: 'Fira Code', monospace; font-size: 0.8rem; color: var(--secondary-text); }
+.card .role { color: var(--accent-color); font-weight: 600; font-size: 0.95rem; margin-bottom: 1rem; }
+.card p + p { margin-top: 0.75rem; }
+.card .tech-stack { margin-top: 1rem; }
+
 .resume-controls { display: flex; justify-content: space-between; align-items: center; background: #fff; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
 .btn-resume { background: var(--accent-color); color: #fff !important; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; }
 
