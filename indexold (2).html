@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DongYu Weng | Physics & CS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scroll-progress"></div>
+    <header>
+        <div class="container nav-container">
+            <a href="#about" class="logo" data-tab="about">DONGYU WENG</a>
+            <nav>
+                <ul class="tab-menu">
+                    <li><button class="tab-link active" data-tab="about">About</button></li>
+                    <li><button class="tab-link" data-tab="research">Research</button></li>
+                    <li><button class="tab-link" data-tab="projects">Projects</button></li>
+                    <li><button class="tab-link" data-tab="resume">Resume</button></li>
+                    <li><a href="mailto:wengd@carleton.edu" class="btn-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="about" class="tab-content active">
+            <section id="hero">
+                <div class="hero-layout">
+                    <div class="hero-image-wrapper">
+                        <img src="headshot.jpg" alt="DongYu Weng" class="hero-pfp">
+                    </div>
+                    <div class="hero-content">
+                        <h1>DongYu Weng</h1>
+                        <p class="subtitle">Sophomore at Carleton College • Physics & Computer Science</p>
+                        <p class="hero-description">
+                            I build at the intersection of low-level systems and physical hardware. 
+                            As a manager at the Carleton Makerspace, I focus on making complex 
+                            physical phenomena tangible through digital fabrication and 
+                            custom-built software tools.
+                        </p>
+                        <div class="hero-tags">
+                            <span class="tag">Optics Outreach</span>
+                            <span class="tag">Systems Programming</span>
+                            <span class="tag">Digital Fabrication</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bio-section">
+                <h2>How I Work</h2>
+                <div class="bio-text reveal">
+                    <p>I learn best by building things. I wrote a Scheme interpreter in C because I wanted to know what actually happens when code runs, and I built a plastic granulator because I wanted to see how recycling works from the inside. Usually that means getting it wrong a few times first, and I'm fine with that.</p>
+                    <p>These days I'm doing research with Professor Martha-Elizabeth Baylor on the plastics used to make optofluidic chips. Before that I spent a semester building optics demos for outreach. I like projects where I get to be in the lab and at the keyboard in the same week.</p>
+                </div>
+            </section>
+        </div>
+
+        <div id="research" class="tab-content">
+            <section>
+                <h2>Research Experience</h2>
+                <div class="card reveal">
+                    <div class="card-header">
+                        <h3>Integrated Optofluidic Devices</h3>
+                        <span class="date"><span class="status-dot"></span>Sep 2026 – Present</span>
+                    </div>
+                    <p class="role">Research Assistant | Carleton College | Prof. Martha-Elizabeth Baylor</p>
+                    <p>Characterizing the photopolymers (light-sensitive plastics) used to fabricate integrated optofluidic devices, which combine optical waveguides and fluidic channels on a single chip. I am helping build apparatus to measure key resin properties such as bulk refractive index, optical loss per unit length, maximum change in refractive index, and stiffness.</p>
+                    <p>By comparing how these properties shift across resin formulations, the goal is a reference table of materials that lets engineers pick the right resin for an application, for example a rubbery formulation for wearables or a glassy one for harsh environments.</p>
+                    <div class="tech-stack">
+                        <span class="tag-tech">Photopolymers</span>
+                        <span class="tag-tech">Optics</span>
+                        <span class="tag-tech">Instrumentation</span>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-header">
+                        <h3>Optics Education Research</h3>
+                        <span class="date">Jan 2026 – Jun 2026</span>
+                    </div>
+                    <p class="role">Research Assistant | Carleton College | Prof. Martha-Elizabeth Baylor</p>
+                    <p>Worked with Professor Baylor on hands-on optics demos for outreach, aimed at making ideas like light and lenses easy to see and play with for young kids and classroom visitors. I prototyped the hardware, with the goal of making each demo simple enough that someone could use it without an explanation.</p>
+                    <div class="tech-stack">
+                        <span class="tag-tech">Optics Outreach</span>
+                        <span class="tag-tech">Prototyping</span>
+                        <span class="tag-tech">Science Education</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="projects" class="tab-content">
+            <section>
+                <h2>Selected Projects</h2>
+                <div class="filter-bar" id="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
+                    <button class="filter-btn" data-filter="hardware">Hardware</button>
+                </div>
+                <div class="project-grid">
+                    <div class="project-card reveal" data-category="software">
+                        <h3>Scheme Interpreter</h3>
+                        <p>A recursive bottom-up parser and environment-model evaluator built in C. Built from scratch to understand the fundamentals of language implementation.</p>
+                        <div class="tech-stack">
+                            <span class="tag-tech">C</span>
+                            <span class="tag-tech">Systems</span>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-category="software">
+                        <h3>Chaotic Oscillator Analysis</h3>
+                        <p>Simulating Asymmetric Coupled Duffing Oscillators. Used NumPy for high-speed vectorization to generate Poincaré sections and analyze Permutation Entropy.</p>
+                        <div class="tech-stack">
+                            <span class="tag-tech">Python</span>
+                            <span class="tag-tech">NumPy</span>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-category="hardware">
+                        <h3>Plastic Recycler</h3>
+                        <p>Designed precision steel cutting blades in Fusion 360 and implemented Arduino-based stall detection for a custom PLA granulator.</p>
+                        <div class="tech-stack">
+                            <span class="tag-tech">Fusion360</span>
+                            <span class="tag-tech">Arduino</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="resume" class="tab-content">
+            <section>
+                <h2>Resume</h2>
+                <div class="resume-controls">
+                    <p>Download or view my full resume.</p>
+                    <a href="DongYu_Resume.pdf" target="_blank" class="btn-resume">Download PDF</a>
+                </div>
+                <div class="resume-viewer">
+                    <object data="DongYu_Resume.pdf" type="application/pdf" width="100%" height="800px">
+                        <p>Your browser doesn't support embedded PDFs. <a href="DongYu_Resume.pdf">Click here to download.</a></p>
+                    </object>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2026 DongYu Weng • Physics & CS @ Carleton College</p>
+    </footer>
+
+    <script>
+        const tabs = ['about', 'research', 'projects', 'resume'];
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function showTab(name, updateHash) {
+            if (!tabs.includes(name)) name = 'about';
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.toggle('active', t.id === name));
+            document.querySelectorAll('.tab-link').forEach(l => l.classList.toggle('active', l.dataset.tab === name));
+            if (updateHash) history.replaceState(null, '', '#' + name);
+            window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+            revealVisible();
+        }
+
+        document.querySelectorAll('[data-tab]').forEach(el => {
+            el.addEventListener('click', e => { e.preventDefault(); showTab(el.dataset.tab, true); });
+        });
+
+        /* Scroll-reveal with stagger */
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        function revealVisible() {
+            document.querySelectorAll('.tab-content.active .reveal:not(.visible)').forEach((el, i) => {
+                el.style.transitionDelay = (reduceMotion ? 0 : i * 90) + 'ms';
+                observer.observe(el);
+            });
+        }
+
+        /* Scroll progress bar */
+        const bar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+            const h = document.documentElement.scrollHeight - window.innerHeight;
+            bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+        }, { passive: true });
+
+        /* Cursor spotlight on cards */
+        document.addEventListener('pointermove', e => {
+            const card = e.target.closest('.card, .project-card');
+            if (!card) return;
+            const r = card.getBoundingClientRect();
+            card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+            card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        });
+
+        /* Project filters */
+        document.getElementById('filter-bar').addEventListener('click', e => {
+            const btn = e.target.closest('.filter-btn');
+            if (!btn) return;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === btn));
+            document.querySelectorAll('.project-card').forEach(c => {
+                const show = btn.dataset.filter === 'all' || c.dataset.category === btn.dataset.filter;
+                c.classList.toggle('hidden', !show);
+            });
+        });
+
+        /* Initial tab from URL hash + back/forward support */
+        window.addEventListener('hashchange', () => showTab(location.hash.slice(1), false));
+        showTab(location.hash.slice(1) || 'about', false);
+        window.scrollTo(0, 0);
+    </script>
+</body>
+</html>

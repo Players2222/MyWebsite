@@ -18,6 +18,7 @@
                 <ul class="tab-menu">
                     <li><button class="tab-link active" data-tab="about">About</button></li>
                     <li><button class="tab-link" data-tab="research">Research</button></li>
+                    <li><button class="tab-link" data-tab="experience">Experience</button></li>
                     <li><button class="tab-link" data-tab="projects">Projects</button></li>
                     <li><button class="tab-link" data-tab="resume">Resume</button></li>
                     <li><a href="mailto:wengd@carleton.edu" class="btn-contact">Contact</a></li>
@@ -93,6 +94,100 @@
             </section>
         </div>
 
+        <div id="experience" class="tab-content">
+            <section>
+                <h2>Work Experience</h2>
+
+                <div class="card reveal">
+                    <div class="card-header">
+                        <h3>Makerspace Manager</h3>
+                        <span class="date"><span class="status-dot"></span>Sep 2024 – Present</span>
+                    </div>
+                    <p class="role">Carleton College | Northfield, MN</p>
+                    <ul>
+                        <li>Assist students and faculty members in projects ranging from sticker making to robot building.</li>
+                    </ul>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-header">
+                        <h3>Physics Lab Assistant</h3>
+                        <span class="date"><span class="status-dot"></span>Sep 2026 – Present</span>
+                    </div>
+                    <p class="role">Carleton College | Northfield, MN</p>
+                    <ul>
+                        <li>Serve as a hands-on instructor in physics lab sections, guiding students through experimental setup, data collection, and analysis.</li>
+                        <li>Explain the physics behind each experiment, troubleshoot equipment, and help students build confidence working through problems on their own.</li>
+                    </ul>
+                </div>
+
+                                                                                <div class="card reveal">
+                    <div class="card-header">
+                        <h3>Engineering Design Associate</h3>
+                        <span class="date">May 2025 – Aug 2026</span>
+                    </div>
+                    <p class="role">Fuzhou Changhui Light Steel Structure Building Company | Fuzhou, China</p>
+                    <ul>
+                        <li>Converted 2D building schematics into 3D models using CAD software, improving visualization and structural accuracy.</li>
+                        <li>Collaborated with engineers and designers to ensure compliance with project specifications and safety standards.</li>
+                    </ul>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-header">
+                        <h3>Data Analysis Intern</h3>
+                        <span class="date">Mar 2024 – Jun 2024</span>
+                    </div>
+                    <p class="role">Office of the State Superintendent of Education | Washington, DC</p>
+                    <ul>
+                        <li>Researched the effects of chronic absenteeism and truancy within DC schools, culminating in a presentation to the public.</li>
+                    </ul>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-header">
+                        <h3>Barista</h3>
+                        <span class="date">Jul 2023 – May 2024</span>
+                    </div>
+                    <p class="role">Luna Hall DC | Washington, DC</p>
+                    <ul>
+                        <li>Served as cashier and prepared specialty boba beverages in a fast-paced customer service environment.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Certifications &amp; Skills</h2>
+                <div class="card reveal">
+                    <h3 class="cert-heading">Certifications</h3>
+                    <ul class="cert-list">
+                        <li><strong>Google:</strong> Cyber Security; Data Advanced Analysis Specialization; IT Automation with Python Specialization</li>
+                        <li><strong>Georgetown School of Continuing Studies:</strong> Cybersecurity: Protecting Our Digital Future</li>
+                    </ul>
+                </div>
+                <div class="card reveal">
+                    <h3 class="cert-heading">Languages</h3>
+                    <div class="tech-stack">
+                        <span class="tag-tech">Python</span>
+                        <span class="tag-tech">C/C++</span>
+                        <span class="tag-tech">Kotlin</span>
+                        <span class="tag-tech">HTML/CSS</span>
+                        <span class="tag-tech">Scheme</span>
+                    </div>
+                    <h3 class="cert-heading">Developer Tools</h3>
+                    <div class="tech-stack">
+                        <span class="tag-tech">Git</span>
+                        <span class="tag-tech">Docker</span>
+                        <span class="tag-tech">VS Code</span>
+                        <span class="tag-tech">Visual Studio</span>
+                        <span class="tag-tech">Eclipse</span>
+                        <span class="tag-tech">Autodesk Fusion 360</span>
+                        <span class="tag-tech">Microsoft Excel</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
         <div id="projects" class="tab-content">
             <section>
                 <h2>Selected Projects</h2>
@@ -151,7 +246,7 @@
     </footer>
 
     <script>
-        const tabs = ['about', 'research', 'projects', 'resume'];
+        const tabs = ['about', 'research', 'experience', 'projects', 'resume'];
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         function showTab(name, updateHash) {
