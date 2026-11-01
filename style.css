@@ -1,11 +1,13 @@
-/* --- Variables & Core Setup --- */
+/* --- Variables & Blueprint Blueprint Theme --- */
 :root {
-    --bg-color: #f8fafc;
+    --bg-color: #f4f7fa;
     --text-color: #0f172a;
     --accent-color: #2563eb; 
     --secondary-text: #475569;
-    --border-color: #cbd5e1;
-    --card-bg: #ffffff;
+    --border-color: #94a3b8;
+    --grid-fine: rgba(37, 99, 235, 0.08);
+    --grid-major: rgba(37, 99, 235, 0.22);
+    --card-bg: rgba(255, 255, 255, 0.92);
     --tag-bg: #e2e8f0;
     --code-tag-bg: #dbeafe;
 }
@@ -18,11 +20,15 @@ body {
     line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
-    /* Tech Drafting Grid Background */
+    
+    /* Authentic Blueprint Dual-Grid Pattern */
     background-image: 
-        linear-gradient(var(--border-color) 0.5px, transparent 0.5px),
-        linear-gradient(90deg, var(--border-color) 0.5px, transparent 0.5px);
-    background-size: 40px 40px;
+        linear-gradient(var(--grid-major) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, var(--grid-major) 1.5px, transparent 1.5px),
+        linear-gradient(var(--grid-fine) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-fine) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -1.5px -1.5px, -1.5px -1.5px, -1px -1px, -1px -1px;
     background-attachment: fixed;
     min-height: 100vh;
 }
@@ -31,9 +37,9 @@ body {
 
 /* --- Navigation --- */
 header {
-    background: rgba(248, 250, 252, 0.8);
+    background: rgba(244, 247, 250, 0.88);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 2px dashed var(--border-color);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -41,7 +47,7 @@ header {
 }
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: 800; color: var(--text-color); text-decoration: none; letter-spacing: 2px; font-size: 1rem; }
+.logo { font-weight: 800; color: var(--text-color); text-decoration: none; letter-spacing: 2px; font-size: 1rem; font-family: 'Fira Code', monospace; }
 
 .tab-menu { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
 .tab-link {
@@ -53,13 +59,13 @@ header {
 .tab-link.active { color: var(--accent-color); border-bottom: 2px solid var(--accent-color); }
 
 .btn-contact {
-    background: var(--text-color); color: #fff !important;
-    padding: 0.5rem 1.2rem; border-radius: 4px; text-decoration: none;
-    font-size: 0.85rem; font-weight: 600; transition: 0.2s;
+    background: var(--text-color); color: #fff; border: none; cursor: pointer;
+    padding: 0.5rem 1.2rem; border-radius: 4px; font-family: 'Fira Code', monospace;
+    font-size: 0.82rem; font-weight: 600; transition: 0.2s;
 }
 .btn-contact:hover { background: var(--accent-color); transform: translateY(-1px); }
 
-/* --- Hero Section (The New Top Layout) --- */
+/* --- Hero Section --- */
 .hero-layout {
     display: flex;
     align-items: center;
@@ -68,51 +74,80 @@ header {
     padding-bottom: 1rem;
 }
 
-.hero-image-wrapper { flex-shrink: 0; }
+.hero-image-wrapper { 
+    flex-shrink: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 .hero-pfp {
     width: 240px;
     height: 240px;
-    border-radius: 20px; /* Modern rounded square */
+    border-radius: 12px;
     object-fit: cover;
-    border: 1px solid var(--border-color);
-    box-shadow: 12px 12px 0px var(--accent-color); /* Offset "Blueprints" Shadow */
-    transition: transform 0.3s ease;
+    border: 2px solid var(--accent-color);
+    box-shadow: 10px 10px 0px rgba(37, 99, 235, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.hero-pfp:hover { transform: translate(-4px, -4px); box-shadow: 16px 16px 0px var(--accent-color); }
+.hero-pfp:hover { transform: translate(-3px, -3px); box-shadow: 14px 14px 0px rgba(37, 99, 235, 0.35); }
+
+.status-badge {
+    font-size: 0.75rem;
+    font-family: 'Fira Code', monospace;
+    color: var(--secondary-text);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
 .hero-content h1 { font-size: 4.5rem; font-weight: 800; letter-spacing: -3px; line-height: 1; margin-bottom: 1rem; }
-.subtitle { font-size: 1.2rem; font-weight: 500; color: var(--accent-color); margin-bottom: 1.5rem; }
+.subtitle { font-size: 1.2rem; font-weight: 600; color: var(--accent-color); margin-bottom: 1.5rem; font-family: 'Fira Code', monospace; }
 .hero-description { font-size: 1.1rem; color: var(--secondary-text); max-width: 550px; margin-bottom: 2rem; }
 
-/* --- Content Styling --- */
+/* --- Section Formatting --- */
 section { padding: 3rem 0; }
-h2 { font-size: 0.9rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 3px; color: var(--secondary-text); border-left: 4px solid var(--accent-color); padding-left: 1rem; }
+h2 { 
+    font-size: 0.9rem; 
+    margin-bottom: 2rem; 
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    color: var(--accent-color); 
+    border-left: 4px solid var(--accent-color); 
+    padding-left: 1rem; 
+    font-family: 'Fira Code', monospace;
+}
 
 .tag, .tag-tech {
     display: inline-block; background: var(--tag-bg); padding: 5px 14px;
     border-radius: 4px; font-size: 0.75rem; font-weight: 700; margin-right: 8px; margin-bottom: 8px;
 }
-.tag-tech { font-family: 'Fira Code', monospace; background: var(--code-tag-bg); color: var(--accent-color); }
+.tag-tech { font-family: 'Fira Code', monospace; background: var(--code-tag-bg); color: var(--accent-color); border: 1px solid rgba(37, 99, 235, 0.2); }
+.clickable-tag { cursor: pointer; transition: 0.2s; }
+.clickable-tag:hover { background: var(--accent-color); color: #fff; }
 
-/* --- Cards & Resume --- */
+/* --- Cards & Grid --- */
 .card, .project-card {
-    background: var(--card-bg); border: 1px solid var(--border-color);
-    padding: 2rem; border-radius: 8px; transition: 0.3s;
+    background: var(--card-bg); 
+    border: 1px solid var(--border-color);
+    padding: 2rem; 
+    border-radius: 6px; 
+    transition: 0.3s;
+    backdrop-filter: blur(4px);
 }
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-.project-card:hover { border-color: var(--accent-color); transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.05); cursor: default;}
 
-/* Apply the pop-out effect to Research cards */
-.card:hover {
+.card:hover, .project-card:hover {
     border-color: var(--accent-color);
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
-    cursor: default; /* Keeps the pointer standard since the card itself isn't a link */
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.1);
 }
 
-
-
-/* Research card details */
 .card { margin-bottom: 1.5rem; }
 .card-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem; }
 .card .date { font-family: 'Fira Code', monospace; font-size: 0.8rem; color: var(--secondary-text); }
@@ -120,33 +155,32 @@ h2 { font-size: 0.9rem; margin-bottom: 2rem; text-transform: uppercase; letter-s
 .card p + p { margin-top: 0.75rem; }
 .card .tech-stack { margin-top: 1rem; }
 
-.resume-controls { display: flex; justify-content: space-between; align-items: center; background: #fff; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
-.btn-resume { background: var(--accent-color); color: #fff !important; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; }
+.resume-controls { display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; margin-bottom: 2rem; }
+.btn-resume { background: var(--accent-color); color: #fff !important; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-family: 'Fira Code', monospace; font-size: 0.85rem; }
 
 .tab-content { display: none; }
 .tab-content.active { display: block; animation: tabIn 0.45s ease both; }
 @keyframes tabIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
-/* --- Dynamic touches --- */
+/* Scroll progress bar */
 #scroll-progress {
     position: fixed; top: 0; left: 0; height: 3px; width: 0;
     background: var(--accent-color); z-index: 200; transition: width 0.1s linear;
 }
 
 /* Scroll reveal */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s, box-shadow 0.3s; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: none; }
-.reveal.visible:hover { transform: translateY(-4px); transition-delay: 0s !important; }
 
-/* Cursor spotlight on cards */
+/* Dynamic spotlight on hover */
 .card:hover, .project-card:hover {
     background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(37, 99, 235, 0.08), transparent 70%), var(--card-bg);
 }
 
-/* Live status dot for ongoing work */
+/* Green status pulse dot */
 .status-dot {
     display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-    background: #22c55e; margin-right: 8px; vertical-align: middle;
+    background: #22c55e; margin-right: 6px; vertical-align: middle;
     animation: pulse 2s ease-out infinite;
 }
 @keyframes pulse {
@@ -155,38 +189,39 @@ h2 { font-size: 0.9rem; margin-bottom: 2rem; text-transform: uppercase; letter-s
     100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }
 
-/* Project filter chips */
+/* Toast alert */
+.toast {
+    position: fixed; bottom: 2rem; right: 2rem;
+    background: var(--text-color); color: #fff;
+    padding: 0.75rem 1.25rem; border-radius: 6px;
+    font-size: 0.85rem; font-family: 'Fira Code', monospace;
+    opacity: 0; transform: translateY(10px);
+    transition: 0.3s ease; pointer-events: none; z-index: 300;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+
+/* Filters */
 .filter-bar { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
 .filter-btn {
     background: var(--card-bg); border: 1px solid var(--border-color); color: var(--secondary-text);
-    font-family: inherit; font-size: 0.8rem; font-weight: 600; padding: 6px 16px;
-    border-radius: 999px; cursor: pointer; transition: 0.2s;
+    font-family: 'Fira Code', monospace; font-size: 0.8rem; font-weight: 600; padding: 6px 16px;
+    border-radius: 4px; cursor: pointer; transition: 0.2s;
 }
 .filter-btn:hover { border-color: var(--accent-color); color: var(--accent-color); }
 .filter-btn.active { background: var(--accent-color); border-color: var(--accent-color); color: #fff; }
 .project-card.hidden { display: none; }
 
-/* Experience & certification lists */
 .card ul { margin-top: 0.5rem; padding-left: 1.25rem; }
 .card li { margin-bottom: 0.4rem; }
-.cert-heading { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--secondary-text); margin-bottom: 0.75rem; }
+.cert-heading { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--secondary-text); margin-bottom: 0.75rem; font-family: 'Fira Code', monospace; }
 .cert-heading:not(:first-child) { margin-top: 1.5rem; }
 .cert-list { list-style: none; padding-left: 0 !important; }
 
-/* Tag hover + bio text */
-.tag, .tag-tech { transition: transform 0.2s, background 0.2s; }
-.tag:hover, .tag-tech:hover { transform: translateY(-2px); }
 .bio-text { max-width: 680px; }
 .bio-text p + p { margin-top: 1rem; }
 
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-    .reveal { opacity: 1; transform: none; }
-}
+footer { padding: 4rem 0; border-top: 1px dashed var(--border-color); text-align: center; color: var(--secondary-text); font-size: 0.8rem; font-family: 'Fira Code', monospace; }
 
-footer { padding: 5rem 0; border-top: 1px solid var(--border-color); text-align: center; color: var(--secondary-text); font-size: 0.8rem; }
-
-/* --- Responsive --- */
 @media (max-width: 850px) {
     .hero-layout { flex-direction: column; text-align: center; gap: 2rem; padding: 2rem 0; }
     .hero-content h1 { font-size: 3rem; letter-spacing: -1px; }
